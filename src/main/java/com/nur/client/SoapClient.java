@@ -1,7 +1,7 @@
 package com.nur.client;
 
-import com.nur.loaneligibility.Acknowledgement;
-import com.nur.loaneligibility.CustomerRequest;
+import com.nur.stub.Acknowledgement;
+import com.nur.stub.CustomerRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.stereotype.Service;
@@ -16,7 +16,7 @@ public class SoapClient {
 
     public Acknowledgement getLoanStatus(CustomerRequest request){
         template = new WebServiceTemplate(marshaller);
-        Acknowledgement acknowledgement = (Acknowledgement) template.marshalSendAndReceive("localhost:9090/ws", request);
+        Acknowledgement acknowledgement = (Acknowledgement) template.marshalSendAndReceive("http://localhost:8080/ws", request);
         return acknowledgement;
     }
 }

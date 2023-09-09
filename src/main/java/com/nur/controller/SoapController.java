@@ -1,8 +1,8 @@
 package com.nur.controller;
 
 import com.nur.client.SoapClient;
-import com.nur.loaneligibility.Acknowledgement;
-import com.nur.loaneligibility.CustomerRequest;
+import com.nur.stub.Acknowledgement;
+import com.nur.stub.CustomerRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
